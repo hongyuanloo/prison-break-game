@@ -100,8 +100,6 @@ const populateGameContainer = function (
     clearanceToBorder,
     nodeDia,
     distBetweenNode,
-    gameContainerCoordinateX,
-    gameContainerCoordinateY,
     userSolution,
     messageSelector,
     userScoreSelector,
@@ -115,8 +113,8 @@ const populateGameContainer = function (
     for (let col = 0; col < columns; col++) {
       let newNode = nodeDiv(
         nodesNames[row * rows + col],
-        gameContainerCoordinateX + distBetweenNode * col + clearanceToBorder,
-        gameContainerCoordinateY + distBetweenNode * row + clearanceToBorder
+        distBetweenNode * col + clearanceToBorder,
+        distBetweenNode * row + clearanceToBorder
       );
       gameContainer.append(newNode);
       newNode.addEventListener(
@@ -134,16 +132,8 @@ const populateGameContainer = function (
         horizontalLineDiv(
           distBetweenNode,
           distance,
-          gameContainerCoordinateX +
-            distBetweenNode * col +
-            clearanceToBorder +
-            nodeDia,
-          gameContainerCoordinateY +
-            distBetweenNode * row +
-            clearanceToBorder +
-            nodeDia
-          // gameContainerCoordinateX + distBetweenNode * (col + 1),
-          // gameContainerCoordinateY + distBetweenNode * (row + 1)
+          distBetweenNode * col + clearanceToBorder + nodeDia,
+          distBetweenNode * row + clearanceToBorder + nodeDia
         )
       );
     }
@@ -158,16 +148,8 @@ const populateGameContainer = function (
         verticalLineDiv(
           distBetweenNode,
           distance,
-          gameContainerCoordinateX +
-            distBetweenNode * col +
-            clearanceToBorder +
-            nodeDia,
-          gameContainerCoordinateY +
-            distBetweenNode * row +
-            clearanceToBorder +
-            nodeDia
-          // gameContainerCoordinateX + distBetweenNode * (col + 1),
-          // gameContainerCoordinateY + distBetweenNode * (row + 1)
+          distBetweenNode * col + clearanceToBorder + nodeDia,
+          distBetweenNode * row + clearanceToBorder + nodeDia
         )
       );
     }

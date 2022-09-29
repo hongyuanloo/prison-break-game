@@ -22,17 +22,11 @@ const gameContainerSetup = function (totalNodesPerSide, userInformation) {
   const userSelectionsSelector = document.getElementById("userSelections");
 
   //---Initialization: gameContainer and Node Setup---//
-  const clearanceToBorder = 25;
+  const clearanceToBorder = 20;
   const nodeDia = 40;
-  const gameContainerWidth = gameContainer.offsetWidth;
-  const gameContainerHeight = gameContainer.offsetHeight;
+  const gameContainerWidth = gameContainer.offsetWidth; // width and height same size.
   const distBetweenNode =
     (gameContainerWidth - (clearanceToBorder + nodeDia) * 2) / (columns - 1);
-
-  //get location of "gameContainer", for population use later.
-  const gameContainerCoordinate = gameContainer.getBoundingClientRect();
-  const gameContainerCoordinateX = gameContainerCoordinate.x;
-  const gameContainerCoordinateY = gameContainerCoordinate.y;
 
   //element to display message to user.
   const messageSelector = document.getElementById("message");
@@ -67,8 +61,6 @@ const gameContainerSetup = function (totalNodesPerSide, userInformation) {
     clearanceToBorder,
     nodeDia,
     distBetweenNode,
-    gameContainerCoordinateX,
-    gameContainerCoordinateY,
     userSolution,
     messageSelector,
     userScoreSelector,

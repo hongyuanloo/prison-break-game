@@ -26,9 +26,12 @@ body {
 -position: static.
 */
 .gameContainer {
-  margin-top: 10px;
-  width: 800px;
-  height: 800px;
+  /* margin-top: 10px; */
+  /* margin-left: 3%; */
+  position: relative;
+  width: 750px;
+  min-width: 750px;
+  height: 750px;
   /* border: solid red; */
 }
 /* --------------------*/
@@ -90,8 +93,6 @@ body {
 -set its "top" and "left" to adjust the location.
 */
 .lineContainer {
-  /* width: 200px; */
-  /* height: 70px; */
   /* border: solid green; */
   position: absolute;
   top: 213.7px;
@@ -102,15 +103,11 @@ body {
 .horizontalLine {
   height: 5px;
   width: 200px;
-  /* background: green; */
   background: rgba(192, 192, 192, 0.4);
 }
 
 .horizontalLineText {
   position: absolute;
-  /* left: 80px; */
-  /* top: -50px; */
-
   top: 0;
   margin-top: -35px;
 }
@@ -118,14 +115,11 @@ body {
 .verticalLine {
   height: 200px;
   width: 5px;
-  /* background: red; */
   background: rgba(192, 192, 192, 0.5);
 }
 
 .verticalLineText {
   position: absolute;
-  /* top: 80px; */
-  /* left: -50px; */
   left: 0;
   margin-left: -30px;
 }
@@ -139,6 +133,10 @@ body {
 - a list of clickable items
 */
 header {
+  /* width: 1200px; */
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -146,13 +144,14 @@ header {
   box-shadow: 0 1px 8px #ddd;
   user-select: none;
   background-color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
   /* border: solid blue; */
 }
 
 #nav-title {
   font-size: 1.8em;
   margin-right: auto;
-  margin-left: 50px;
+  margin-left: 3%;
   margin-top: 10px;
   margin-bottom: 10px;
   /* border: solid red; */
@@ -184,6 +183,9 @@ header li {
 #contentContainer {
   display: flex;
   justify-content: center;
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* --------------------*/
 
@@ -197,15 +199,16 @@ header li {
 - fiedset element
 */
 #resultContainer {
-  /* display: inline-block; */
   display: flex;
   flex-direction: column;
   padding: 20px;
   width: 500px;
+  min-width: 500px;
   height: 620px;
   background-color: rgba(0, 0, 0, 0.4);
   margin-left: 20px;
-  margin-top: 30px;
+  margin-right: 20px;
+  margin-top: 20px;
   box-shadow: 0 1px 8px #ddd;
   /* border: solid green; */
 }
@@ -323,5 +326,6 @@ fieldset {
   width: 200px;
   user-select: none;
   pointer-events: none;
+  box-shadow: none;
 }
 /* --------------------*/
