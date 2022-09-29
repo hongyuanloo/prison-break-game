@@ -340,8 +340,6 @@ fieldset {
   text-align: center;
   box-shadow: 0 1px 8px #ddd;
   height: 70px;
-  background-color: #d0daee;
-  background-color: rgba(204, 204, 204, 0.6);
   background-color: rgba(0, 0, 0, 0.4);
   /* border: solid blue; */
 }
