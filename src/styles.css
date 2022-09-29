@@ -329,3 +329,48 @@ fieldset {
   box-shadow: none;
 }
 /* --------------------*/
+
+/* ----footer Setup----// */
+.footer {
+  width: 1300px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: 0 1px 8px #ddd;
+  height: 70px;
+  background-color: #d0daee;
+  background-color: rgba(204, 204, 204, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
+  /* border: solid blue; */
+}
+
+.icon-style {
+  height: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 12px;
+  /* border: solid blue; */
+}
+
+#click-img:hover {
+  color: #1b6b63;
+  cursor: pointer;
+  box-shadow: 0 1px 8px #ddd;
+}
+.footer-item {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#email-address {
+  color: yellow;
+  height: 50px;
+  font-size: 20px;
+  padding-top: 22px;
+  padding-left: 0px;
+  padding-right: 18px;
+}
+/* --------------------*/
