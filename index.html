@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prison Break</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-handcuffs.png" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      charset="utf-8"
+    ></script>
+    <script type="module" src="app.js" charset="utf-8" defer></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <img
+      id="background-img"
+      src="./images/background-undergroundprison.jpg"
+      alt="Italian Trulli"
+    />
+    <header>
+      <h1 id="nav-title">Prison Break</h1>
+      <nav>
+        <ul>
+          <li class="nav-item" id="timer">
+            Timer: <span id="timeCount"> -- </span> s
+          </li>
+          <li class="nav-item" id="newGame">New Game</li>
+          <li class="nav-item" id="previousLevel">Previous Level</li>
+          <li class="nav-item" id="nextLevel">Next Level</li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="popUpBox-overlay">
+      <div id="popUpBox">
+        <div id="popUpBox-header">Modal Pop Up Window</div>
+        <div id="popUpBox-content">Modal Content</div>
+        <div class="popUpBox-footer">
+          <div id="close-popUpBox">New Game</div>
+        </div>
+      </div>
+    </div>
+    <div id="contentContainer">
+      <div class="gameContainer"></div>
+
+      <div id="resultContainer">
+        <div id="scoreContainer">Score: <span id="userScore">-1</span></div>
+
+        <div class="levelContainer">
+          Current Level: <span id="currentLevel">0</span>
+        </div>
+
+        <div class="levelContainer">
+          Unlocked Level: <span id="unlockedLevel">0</span>
+        </div>
+
+        <fieldset id="userSelectionContainer">
+          <legend>Shortest Path:</legend>
+          <span id="userSelections"></span>
+        </fieldset>
+
+        <fieldset id="msgContainer">
+          <legend>Message:</legend>
+          <div id="message">Welcome to Prison Break. Click "a" to start.</div>
+        </fieldset>
+
+        <div id="sound-container">
+          <div>
+            <img id="unmute" src="./images/speaker-80.png" alt="unmute" />
+          </div>
+          <div>
+            <img id="mute" src="./images/mute-80.png" alt="mute" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
