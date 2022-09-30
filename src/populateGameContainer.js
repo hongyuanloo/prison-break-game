@@ -83,18 +83,14 @@ const populateGameContainer = function (
 ) {
   const {
     //squareGraphSetupVar//
-    nodes,
     nodesNames,
-    adjacentNodesNames,
-    adjacentNodesDistances,
     rows,
     columns,
     horizontalDistances,
     verticalDistances,
     startNode,
     finalNode,
-    shortestPathNodesNamesSolution,
-    //gameContainerSetup1//
+    //gameContainerSetup//
     gameContainer,
     userSelectionsSelector,
     clearanceToBorder,

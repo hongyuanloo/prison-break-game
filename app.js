@@ -5,29 +5,9 @@ import { populateGameContainer } from "./src/populateGameContainer.js";
 const getPathDistance = function (nodeNamesArr, gameContainerSetupVar) {
   const {
     //squareGraphSetupVar//
-    nodes,
     nodesNames,
     adjacentNodesNames,
     adjacentNodesDistances,
-    rows,
-    columns,
-    horizontalDistances,
-    verticalDistances,
-    startNode,
-    finalNode,
-    shortestPathNodesNamesSolution,
-    //gameContainerSetup//
-    gameContainer,
-    userSelectionsSelector,
-    clearanceToBorder,
-    nodeDia,
-    distBetweenNode,
-    userSolution,
-    messageSelector,
-    userScoreSelector,
-    currentLevelSelector,
-    user,
-    unlockedLevelSelector,
   } = gameContainerSetupVar;
 
   let sumDistance = 0;
@@ -50,29 +30,9 @@ const getPathDistance = function (nodeNamesArr, gameContainerSetupVar) {
 const isSolutionCorrect = function (gameContainerSetupVar) {
   const {
     //squareGraphSetupVar//
-    nodes,
-    nodesNames,
-    adjacentNodesNames,
-    adjacentNodesDistances,
-    rows,
-    columns,
-    horizontalDistances,
-    verticalDistances,
-    startNode,
-    finalNode,
     shortestPathNodesNamesSolution,
     //gameContainerSetup//
-    gameContainer,
-    userSelectionsSelector,
-    clearanceToBorder,
-    nodeDia,
-    distBetweenNode,
     userSolution,
-    messageSelector,
-    userScoreSelector,
-    currentLevelSelector,
-    user,
-    unlockedLevelSelector,
   } = gameContainerSetupVar;
 
   //---Both solutions must have same number of nodes.---//
@@ -100,26 +60,13 @@ const updateUserSelection = function (gameContainerSetupVar) {
   const {
     //squareGraphSetupVar//
     nodes,
-    nodesNames,
-    adjacentNodesNames,
-    adjacentNodesDistances,
-    rows,
-    columns,
-    horizontalDistances,
-    verticalDistances,
     startNode,
     finalNode,
-    shortestPathNodesNamesSolution,
     //gameContainerSetup//
-    gameContainer,
     userSelectionsSelector,
-    clearanceToBorder,
-    nodeDia,
-    distBetweenNode,
     userSolution,
     messageSelector,
     userScoreSelector,
-    currentLevelSelector,
     user,
     unlockedLevelSelector,
   } = gameContainerSetupVar;
@@ -197,7 +144,7 @@ const updateUserSelection = function (gameContainerSetupVar) {
                 console.log(`not supposed to show up`);
             }
           } else {
-            messageSelector.innerText = "Good attemp! Try again.";
+            messageSelector.innerText = "Good attempt! Try again.";
           }
         }
       }
@@ -248,30 +195,8 @@ const setupGameLevel = function (totalNodesPerSide, userInformation) {
     userInformation
   );
   const {
-    //squareGraphSetupVar//
-    nodes,
-    nodesNames,
-    adjacentNodesNames,
-    adjacentNodesDistances,
-    rows,
-    columns,
-    horizontalDistances,
-    verticalDistances,
-    startNode,
-    finalNode,
-    shortestPathNodesNamesSolution,
     //gameContainerSetup//
-    gameContainer,
-    userSelectionsSelector,
-    clearanceToBorder,
-    nodeDia,
-    distBetweenNode,
-    userSolution,
-    messageSelector,
-    userScoreSelector,
-    currentLevelSelector,
     user,
-    unlockedLevelSelector,
   } = gameContainerSetupVar;
   Object.assign(user, userInformation);
   populateGameContainer(
@@ -402,7 +327,7 @@ const countDownCounter = function () {
     openPopUpBox(
       "Time Out!",
       `Score: ${user.score} points` +
-        "\nGood attempt. You are smarter now. \nTry again [New Game]?"
+        "\nGood attempt. Hope you enjoy the game. \nTry again [New Game]?"
     );
   }
   timeCounter--;
@@ -442,30 +367,12 @@ startTimer(TIME_SECONDS, DELAY_MILISECONDS);
 //---First Game Setup---//
 const gameContainerSetupVar = gameContainerSetup(4, userInformation);
 const {
-  //squareGraphSetupVar//
-  nodes,
-  nodesNames,
-  adjacentNodesNames,
-  adjacentNodesDistances,
-  rows,
-  columns,
-  horizontalDistances,
-  verticalDistances,
-  startNode,
-  finalNode,
-  shortestPathNodesNamesSolution,
   //gameContainerSetup//
   gameContainer,
   userSelectionsSelector,
-  clearanceToBorder,
-  nodeDia,
-  distBetweenNode,
   userSolution,
   messageSelector,
-  userScoreSelector,
-  currentLevelSelector,
   user,
-  unlockedLevelSelector,
 } = gameContainerSetupVar;
 populateGameContainer(gameContainerSetupVar, updateUserSelection, TIME_SECONDS);
 

@@ -4,9 +4,7 @@ import { Graph } from "./Graph.js";
 const getshortestPathNodesNames = function (squareGraph, startNode, finalNode) {
   const shortestPaths = squareGraph.nodes.shortestPathFrom(startNode);
   const nodesNames = shortestPaths.nodesNames;
-  const shortestDistanceFromSource = shortestPaths.shortestDistanceFromSource;
   const prevNodesNames = shortestPaths.prevNodesNames;
-  const shortestDistanceToEndNode = 3;
   const shortestNodeNamesToEndNode = [];
 
   let node = finalNode;
