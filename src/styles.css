@@ -2,20 +2,14 @@
   box-sizing: border-box;
 }
 
+/* ----background image----// */
 body {
-  background: lightgrey;
+  background-image: url("../images/background-undergroundprison.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: rgba(255, 255, 0, 1);
   margin: 0;
-  /* color: rgba(192, 192, 192, 1); */
-}
-/* ----background image----// */
-#background-img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: -2;
-  /* border: solid red; */
 }
 /* --------------------*/
 
@@ -26,8 +20,6 @@ body {
 -position: static.
 */
 .gameContainer {
-  /* margin-top: 10px; */
-  /* margin-left: 3%; */
   position: relative;
   width: 750px;
   min-width: 750px;
@@ -53,7 +45,6 @@ body {
   color: yellow;
   text-align: center;
   background: rgba(0, 0, 255, 0.5);
-  /* background: blue; */
   z-index: 1;
   border: solid rgba(0, 255, 255, 0.5);
   /*   border: solid black; */
